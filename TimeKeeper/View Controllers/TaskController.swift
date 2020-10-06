@@ -47,21 +47,24 @@ class TaskController: UIViewController {
         outButton.layer.cornerRadius = 5
         outButton.layer.borderColor = UIColor.black.cgColor
         
+        NotificationCenter.default.addObserver(self, selector: #selector(didComeBack), name: Notification.Name("didComeBack"), object: nil)
+        
         // Create a notification to update timer if app goes into the background
         NotificationCenter.default.addObserver(self, selector: #selector(onDidReceiveData), name: Notification.Name("didReceiveData"), object: nil)
         
         // Update timer if previously clocked in
         if task!.clockedIn {
             updateTimer(startTimer: true)
+            print("timerupdated")
         }
-        print("test2")
+        
         updateUI()
     }
 
     
     func updateUI() {
         // Progress Bar Setup
-        let currentProgress = Float(task!.elapsedSecondsThisWeek! / task!.weeklyGoalTimeInSeconds!)
+        let currentProgress = Float((task!.elapsedSecondsThisWeek! + Double(timeInSeconds)) / task!.weeklyGoalTimeInSeconds!)
         progressBar.setProgress(currentProgress, animated: true)
         
         if currentProgress < 0.5{
@@ -76,8 +79,7 @@ class TaskController: UIViewController {
             taskNameLabel.text = task.name
             goalTimeLabel.text = "Weekly Goal: " + String(Int(task.weeklyGoalTimeInSeconds! / secondsInHour)) + " hours"
             
-            let elapsedSeconds = Int(task.elapsedSecondsThisWeek!)
-            print("elapsed Seconds: \(elapsedSeconds)")
+            let elapsedSeconds = Int(task.elapsedSecondsThisWeek! + Double(timeInSeconds))
             let tf = TimeFormatter()
             storedTimeDisplayLabel.text = tf.convertToDisplayString(elapsedTimeInSeconds: elapsedSeconds)
         }else{
@@ -90,8 +92,17 @@ class TaskController: UIViewController {
         updateUI()
     }
     
+    @objc func didComeBack(_ notification:Notification) {
+        print("cameBack")
+        if task!.clockedIn{
+            let secondsSinceClockedIn = Double((task?.clockInDate!.timeIntervalSinceNow)! * -1)
+            timeInSeconds = Int(secondsSinceClockedIn)
+        }
+        updateUI()
+    }
+    
     // MARK: Actions
-    @IBAction func clockInButton(_ sender: Any) {
+    fileprivate func clockIn() {
         if !task!.clockedIn {
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerPing), userInfo: nil, repeats: true)
             task!.clockedIn = true
@@ -101,7 +112,11 @@ class TaskController: UIViewController {
         }
     }
     
-    @IBAction func clockOutButton(_ sender: Any) {
+    @IBAction func clockInButton(_ sender: Any) {
+        clockIn()
+    }
+    
+    fileprivate func clockOut() {
         if task!.clockedIn {
             timer.invalidate()
             timeDisplayLabel.text = "0:00:00"
@@ -116,13 +131,13 @@ class TaskController: UIViewController {
             // Change stored time label
             let tf = TimeFormatter()
             storedTimeDisplayLabel.text = tf.convertToDisplayString(elapsedTimeInSeconds: Int(task!.elapsedSecondsThisWeek!))
-    
+            
             
             // Save new time with Core Data
             save(name: task!.name!, elapsedSeconds: task!.elapsedSecondsThisWeek!, clockedIn: false, clockInDate: nil)
             
             if progressBar.progress < 1.0 {
-             let currentProgress = Float(task!.elapsedSecondsThisWeek! / task!.weeklyGoalTimeInSeconds!)
+                let currentProgress = Float(task!.elapsedSecondsThisWeek! / task!.weeklyGoalTimeInSeconds!)
                 progressBar.setProgress(currentProgress, animated: true)
             }
             if !progressFlag && progressBar.progress > 0.5{
@@ -130,6 +145,10 @@ class TaskController: UIViewController {
                 progressFlag = true
             }
         }
+    }
+    
+    @IBAction func clockOutButton(_ sender: Any) {
+        clockOut()
     }
         
     @IBAction func adjustTimeButton(_ sender: Any) {
