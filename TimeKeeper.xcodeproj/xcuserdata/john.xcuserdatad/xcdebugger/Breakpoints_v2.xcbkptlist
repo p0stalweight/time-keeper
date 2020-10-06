@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "46E508CB-B188-4B2D-AE1F-4C47F8A1B256"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "31F603CD-6864-4688-B2F6-A58854BCD29D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TimeKeeper/TaskTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "TaskTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "31F603CD-6864-4688-B2F6-A58854BCD29D - eb9139f2dd00a972"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TimeKeeper.TaskTableViewController.tasks.getter : Swift.Array&lt;__C.NSManagedObject&gt;"
+                  moduleName = "TimeKeeper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/john/Code/TimeKeeper/TimeKeeper/TaskTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "122">
+               </Location>
+               <Location
+                  uuid = "31F603CD-6864-4688-B2F6-A58854BCD29D - 367f985a642c906"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TimeKeeper.TaskTableViewController.tasks.setter : Swift.Array&lt;__C.NSManagedObject&gt;"
+                  moduleName = "TimeKeeper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/john/Code/TimeKeeper/TimeKeeper/TaskTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "31F603CD-6864-4688-B2F6-A58854BCD29D - 579b89c786e50300"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TimeKeeper.TaskTableViewController.tasks.modify : Swift.Array&lt;__C.NSManagedObject&gt;"
+                  moduleName = "TimeKeeper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/john/Code/TimeKeeper/TimeKeeper/TaskTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "31F603CD-6864-4688-B2F6-A58854BCD29D - 52f3c96fae79b6ac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TimeKeeper.TaskTableViewController.tasks.modify : Swift.Array&lt;__C.NSManagedObject&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "TimeKeeper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/john/Code/TimeKeeper/TimeKeeper/TaskTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "31F603CD-6864-4688-B2F6-A58854BCD29D - ebf1978a03faf070"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TimeKeeper.TaskTableViewController.init(style: __C.UITableViewStyle) -&gt; TimeKeeper.TaskTableViewController"
+                  moduleName = "TimeKeeper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/john/Code/TimeKeeper/TimeKeeper/TaskTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "81">
+               </Location>
+               <Location
+                  uuid = "31F603CD-6864-4688-B2F6-A58854BCD29D - 4232d26a4fd19bc6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TimeKeeper.TaskTableViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; TimeKeeper.TaskTableViewController"
+                  moduleName = "TimeKeeper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/john/Code/TimeKeeper/TimeKeeper/TaskTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "188">
+               </Location>
+               <Location
+                  uuid = "31F603CD-6864-4688-B2F6-A58854BCD29D - 75914f8a075ccd7c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TimeKeeper.TaskTableViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;TimeKeeper.TaskTableViewController&gt;"
+                  moduleName = "TimeKeeper"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/john/Code/TimeKeeper/TimeKeeper/TaskTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "123">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1186DEBB-AEF9-4826-B336-83EEBC44E10B"
+            shouldBeEnabled = "Yes"
+            nameForDebugger = "session time"
+            ignoreCount = "0"
+            continueAfterRunningActions = "Yes"
+            filePath = "TimeKeeper/TaskController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "clockOutButton(_:)"
+            landmarkType = "7">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.Log">
+                  <ActionContent
+                     message = "@sessionTimeInSeconds@"
+                     conveyanceType = "0">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "225705CE-4BD9-41C2-AEE1-61F4C65F3DF5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "Yes"
+            filePath = "TimeKeeper/TaskController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "clockOutButton(_:)"
+            landmarkType = "7">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.Log">
+                  <ActionContent
+                     message = "@elapsedSeconds@"
+                     conveyanceType = "0">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
