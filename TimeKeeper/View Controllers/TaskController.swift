@@ -54,7 +54,7 @@ class TaskController: UIViewController {
         if task!.clockedIn {
             updateTimer(startTimer: true)
         }
-        print("test")
+        print("test2")
         updateUI()
     }
 
